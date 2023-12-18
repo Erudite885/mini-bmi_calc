@@ -36,7 +36,7 @@ const BMI: React.FC = () => {
     }
 
   return (
-      <div className='flex flex-col py-6 px-4 mx-6 bg-gradient-to-br from-lime-100 to-lime-300 rounded-br-3xl max-w-[320px] '>
+      <div className='flex flex-col py-6 px-4 mx-6 bg-gradient-to-br from-lime-100 to-lime-300 rounded-3xl max-w-[320px] '>
           <p className='py-4 font-bold text-lg'>Enter your details below</p>
          
           <div className='flex gap-3 font-semibold'>
