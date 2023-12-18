@@ -64,8 +64,8 @@ const BMI: React.FC = () => {
          
           <div className='bg-lime-800 text-white rounded-e-3xl py-8 px-4 mt-6'>
              {weight && height ? <p>your BMI is...</p> : <p></p> }
-              {weight && height ? <p className='text-3xl font'>{calculateBMI()}</p> : <p>BMI not available, please insert weight and height.</p> }
-              {weight && height ? <p>{classifyWeight(parseFloat(calculateBMI()))}</p> : <p></p> }
+              {weight && height ? <p className='text-3xl font-bold'>{calculateBMI()}</p> : <p>BMI not available, please insert weight and height.</p> }
+              {weight && height ? <p>You are <span className='underline'>{classifyWeight(parseFloat(calculateBMI()))}</span></p> : <p></p> }
               
          </div>
               
