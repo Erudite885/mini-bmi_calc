@@ -48,17 +48,18 @@ const BMI: React.FC = () => {
               </label>
           </div>
 
-          <div className='flex gap-3 flex-col py-4 font-extralight '>
-              <div className='flex flex-col relative'>
-                  <label htmlFor="" className='text-sm'>Height</label>
-                  <input className='p-2 rounded-md' type="number" value={height} onChange={(e) => setHeight(+e.target.value)} />
-                  <span className='absolute font-bold right-3 top-7' >({unit === 'metric' ? 'cm' : 'inches' })</span>
-              </div>
-              <div className='flex flex-col relative'>
-                  <label htmlFor="" className='text-sm'>Weight</label>
-                  <input className='p-2 rounded-md' type="number" value={weight} onChange={(e) => setWeight(+e.target.value)} />
-                  <span className='absolute font-bold right-3 top-7'>({unit === 'metric' ? 'kg' : 'lbs' })</span>
-              </div>
+          
+              <div className='flex gap-3 flex-col py-4 font-extralight '>
+                  <div className='flex flex-col relative'>
+                    <label htmlFor="" className='text-sm'>Height</label>
+                    <input className='p-2 rounded-md' type="number" value={height} onChange={(e) => setHeight(+e.target.value)} />
+                    <span className='absolute font-bold right-3 top-7' >({unit === 'metric' ? 'cm' : 'inches' })</span>
+                 </div>
+                 <div className='flex flex-col relative'>
+                    <label htmlFor="" className='text-sm'>Weight</label>
+                    <input className='p-2 rounded-md' type="number" value={weight} onChange={(e) => setWeight(+e.target.value)} />
+                    <span className='absolute font-bold right-3 top-7'>({unit === 'metric' ? 'kg' : 'lbs' })</span>
+                 </div>
           </div>
          
           <div className='bg-lime-800 text-white rounded-e-3xl py-8 px-4 mt-6'>
@@ -66,7 +67,9 @@ const BMI: React.FC = () => {
               {weight && height ? <p className='text-3xl font'>{calculateBMI()}</p> : <p>BMI not available, please insert weight and height.</p> }
               {weight && height ? <p>{classifyWeight(parseFloat(calculateBMI()))}</p> : <p></p> }
               
-          </div>
+         </div>
+              
+        
     </div>
   )
 }
